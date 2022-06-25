@@ -1,0 +1,52 @@
+@import "./variables";
+
+@mixin container {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: $desktop) {
+        margin: 0 20px;
+    }
+    @media (min-width: $desktop) {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+}
+
+@mixin title {
+    font-size: 32px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+        font-size: 42px;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 48px;
+    }
+}
+// alex
+@mixin textstyle ($font-size, $font-weight, $line-height, $font-family, $color, $text-align) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height; 
+    font-family: $font-family;
+    color: $color;
+    text-align: $text-align;
+}
+@mixin flexstyle ($flex-directions,$justify-content,$align-items, $flex-wrap) {
+   display: flex; 
+   flex-direction: $flex-directions;
+   justify-content: $justify-content;
+   align-items: $align-items;
+   flex-wrap: $flex-wrap;
+}

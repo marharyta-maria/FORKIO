@@ -1,0 +1,23 @@
+@import "./basic/_reset.scss";
+@import "./abstracts/_mixins.scss";
+@import "./abstracts/_variables.scss";
+@import "./components/_header.scss";
+@import "./components/_people.scss";
+@import "./components/_pricing.scss";
+@import "./components/_revolution.scss";
+@import "./components/_whatget.scss";
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+
+.main-container {
+ width: 100%;
+ overflow: hidden;
+  
+}

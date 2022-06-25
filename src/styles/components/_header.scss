@@ -1,0 +1,410 @@
+@media (max-width: 480.5px) {
+  .header {
+    position: relative;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    height: 770px;
+    min-width: 320px;
+    background-image: url("./../dist/img/header.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .header__top-line {
+    margin: 0 -10px;
+    padding: 0 10px;
+    @include flexstyle(row, space-between, center, nowrap);
+    background-color: $top-line-color;
+    height: 103px;
+  }
+  .header__logo-container {
+    @include flexstyle(row, space-between, center, nowrap);
+  }
+  .header__logo {
+    position: relative;
+    overflow: hidden;
+    width: 43px;
+    height: 41px;
+    &-title {
+      display: none;
+    }
+  }
+  .header__button--buy {
+    width: 119px;
+    height: 37px;
+    background-color: $accent;
+    border-radius: 18px;
+    @include flexstyle(row, center, center, nowrap);
+    @include textstyle(15px, 700, 15px, "Montserrat", $text-light, center);
+  }
+  .header__button-headen-menu {
+    width: 26px;
+    height: 23px;
+  }
+  .button-headen-menu--cross {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 11px;
+      width: 30px;
+      height: 0px;
+      border-bottom: 3px solid $text-light;
+      transform: rotate(45deg);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 11px;
+      width: 30px;
+      height: 0px;
+      border-bottom: 3px solid $text-light;
+      transform: rotate(135deg);
+    }
+  }
+  .button-headen-menu--lines {
+    border-bottom: 3px solid $text-light;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      width: 26px;
+      height: 0px;
+      border-bottom: 3px solid $text-light;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 0px;
+      width: 18px;
+      height: 0px;
+      border-bottom: 3px solid $text-light;
+    }
+  }
+  .header__menu--disactive {
+    display: none;
+  }
+  .header__menu--active {
+    position: absolute;
+    top: 103px;
+    left: calc(50% - 147px);
+    width: 293px;
+    height: 378px;
+    background-color: $hidden-menu-color;
+    @include textstyle(26px, 400, 26px, "Montserrat", $text-light, start);
+    @include flexstyle(column, center, center, nowrap);
+    & ul li {
+      position: relative;
+      border-bottom: 2px solid $hidden-menu-lines-color;
+      width: 293px;
+    }
+    & ul li a {
+      @include textstyle(26px, 400, 88px, "Montserrat", $text-light, start);
+      padding-left: 36px;
+    }
+    & ul li:active a {
+      color: $accent;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 17px;
+        height: 53px;
+        border-left: 8px solid $accent;
+      }
+    }
+    & ul li:focus a {
+      color: $accent;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 17px;
+        height: 53px;
+        border-left: 8px solid $accent;
+      }
+    }
+    & ul li:hover a {
+      color: $accent;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 17px;
+        height: 53px;
+        border-left: 8px solid $accent;
+      }
+    }
+  }
+
+  .header__main-title {
+    @include textstyle(48px, 700, 48px, "Montserrat", $text-light, center);
+    padding-top: 50px;
+  }
+  .header__main-sub-title {
+    @include textstyle(18px, 400, 24px, "Montserrat", $accent, center);
+    padding: 19px 11px;
+  }
+  .header__main-little-sub-title {
+    @include textstyle(14px, 400, 14px, "Montserrat", $text-secondary, center);
+    text-transform: uppercase;
+  }
+  .header__button-download {
+    position: absolute;
+    bottom: 32px;
+    left: calc(50% - 145px);
+    z-index: 1;
+    @include flexstyle(row, center, center, nowrap);
+    width: 290px;
+    height: 45px;
+    background-color: $accent;
+    border-radius: 40px;
+    @include textstyle(18px, 700, 20px, "Montserrat", $text-light, center);
+  }
+  .header__button-download-subtitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 10px 5px;
+    @include textstyle(14px, 400, 14px, "Montserrat", $text-secondary, center);
+    background-color: $text-light;
+  }
+}
+
+// ==============================================================================
+
+@media (min-width: 481px) and (max-width: 992.5px) {
+  .header {
+    padding: 0 10px;
+    position: relative;
+    height: 868px;
+    min-width: 300px;
+    background-image: url("./../dist/img/header.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .header__top-line {
+    margin: 0 -10px;
+    padding: 0 10px;
+    padding: 22px 15px 0;
+    @include flexstyle(row, space-between, start, nowrap);
+    background-color: $top-line-color;
+    height: 118px;
+  }
+  .header__logo-container {
+    height: 41px;
+    width: 160px;
+    @include flexstyle(row, space-around, start, nowrap);
+    align-items: center;
+  }
+  .header__logo {
+    position: relative;
+    overflow: hidden;
+    width: 43px;
+    height: 41px;
+    &-title {
+      @include flexstyle(row, center, center, nowrap);
+      padding-top: 10px;
+      & a {
+        @include textstyle(24px, 700, 16px, "Lato", $accent, center);
+      }
+    }
+  }
+  .header__button--buy {
+    width: 119px;
+    height: 37px;
+    background-color: $accent;
+    border-radius: 18px;
+    @include flexstyle(row, center, center, nowrap);
+    @include textstyle(15px, 700, 15px, "Montserrat", $text-light, center);
+  }
+  .header__button-headen-menu {
+    display: none;
+  }
+  .header__menu--disactive,
+  .header__menu--active {
+    @include flexstyle(row, center, center, nowrap);
+  }
+  .header__menu {
+    position: absolute;
+    width: 76%;
+    min-width: 390px;
+    top: 85px;
+    left: 12%;
+    & ul {
+      width: 100%;
+      height: 21px;
+      @include flexstyle(row, space-between, center, nowrap);
+      & li a {
+        @include flexstyle(row, space-between, center, nowrap);
+        @include textstyle(16px, 700, 18px, "Montserrat", $accent, center);
+      }
+    }
+  }
+  .header__main-title {
+    @include textstyle(72px, 700, 72px, "Montserrat", $text-light, center);
+    padding-top: 68px;
+  }
+  .header__main-sub-title {
+    @include textstyle(24px, 400, 24px, "Montserrat", $accent, center);
+    padding: 19px 11px;
+  }
+  .header__main-little-sub-title {
+    @include textstyle(14px, 400, 14px, "Montserrat", $text-secondary, center);
+    text-transform: uppercase;
+  }
+  .header__button-download {
+    position: absolute;
+    bottom: 31px;
+    left: calc(50% - 197px);
+    z-index: 1;
+    @include flexstyle(row, center, center, nowrap);
+    width: 390px;
+    height: 62px;
+    background-color: $accent;
+    border-radius: 40px;
+    @include textstyle(21px, 700, 23px, "Montserrat", $text-light, center);
+  }
+  .header__button-download-subtitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 45px 0 5px;
+    @include textstyle(14px, 400, 14px, "Montserrat", $text-secondary, center);
+    background-color: $text-light;
+  }
+}
+
+// ==============================================================================================
+
+@media (min-width: 993px) {
+  .header {
+    position: relative;
+    height: 929px;
+    background-image: url("./../dist/img/header.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .header__top-line {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include flexstyle(row, space-between, center, nowrap);
+    height: 103px;
+  }
+  .header__logo-container {
+    height: 41px;
+    width: 160px;
+    @include flexstyle(row, space-around, center, nowrap);
+
+    &:hover .header__main-logo {
+      position: absolute;
+      top: -50px;
+    }
+    &:hover .header__headen-logo {
+      position: absolute;
+      top: 0px;
+    }
+    &:hover .header__logo-title a {
+      color: $text-light;
+    }
+  }
+  .header__logo {
+    position: relative;
+    overflow: hidden;
+    width: 43px;
+    height: 41px;
+    &-title {
+      @include flexstyle(row, center, center, nowrap);
+      padding-top: 10px;
+      & a {
+        @include textstyle(24px, 700, 16px, "Lato", $accent, center);
+      }
+    }
+  }
+  .header__button--buy {
+    width: 119px;
+    height: 37px;
+    background-color: $accent;
+    border-radius: 18px;
+    @include flexstyle(row, center, center, nowrap);
+    @include textstyle(15px, 700, 15px, "Montserrat", $text-light, center);
+    &:hover {
+      background-color: $text-light;
+      color: $accent;
+    }
+  }
+  .header__button-headen-menu {
+    display: none;
+  }
+  .header__menu--disactive,
+  .header__menu--active {
+    @include flexstyle(row, center, center, nowrap);
+  }
+  .header__menu {
+    position: absolute;
+    top: 40px;
+    right: 15%;
+    width: 40%;
+    height: 21px;
+    @include flexstyle(row, center, center, nowrap);
+    & ul {
+      width: 100%;
+      @include flexstyle(row, space-between, center, nowrap);
+    }
+    & ul li a {
+      @include textstyle(16px, 700, 18px, "Montserrat", $accent, center);
+      &:hover {
+        color: $text-light;
+      }
+    }
+  }
+  .header__main-title {
+    @include textstyle(82px, 700, 82px, "Montserrat", $text-light, center);
+    padding-top: 143px;
+  }
+  .header__main-sub-title {
+    @include textstyle(30px, 400, 30px, "Montserrat", $accent, center);
+    padding: 19px 11px;
+  }
+  .header__main-little-sub-title {
+    @include textstyle(16px, 400, 16px, "Montserrat", $text-secondary, center);
+    text-transform: uppercase;
+  }
+  .header__button-download {
+    position: absolute;
+    bottom: 31px;
+    left: calc(50% - 197px);
+    z-index: 1;
+    @include flexstyle(row, center, center, nowrap);
+    width: 384px;
+    height: 56px;
+    background-color: $accent;
+    border-radius: 40px;
+    border: 3px solid $accent;
+    @include textstyle(21px, 700, 23px, "Montserrat", $text-light, center);
+    &:hover {
+      color: $accent;
+      background-color: $text-light;
+      border: 3px solid $accent;
+    }
+  }
+  .header__button-download-subtitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 45px 0 5px;
+    @include textstyle(14px, 400, 14px, "Montserrat", $text-secondary, center);
+    background-color: $text-light;
+  }
+}

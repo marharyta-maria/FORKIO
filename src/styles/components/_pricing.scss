@@ -1,0 +1,291 @@
+@media (max-width: 480.5px) {
+  .pricing {
+    width: 100%;
+    padding: 0 10px;
+    min-width: 320px;
+    background-image: url("./../dist/img/price.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .pricing__title {
+    margin: 0 auto;
+    width: 85%;
+    padding-top: 12px;
+    @include textstyle(28px, 700, 42px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards {
+    padding: 32px 0 100px;
+    @include flexstyle(column, center, center, nowrap);
+    gap: 18px;
+  }
+  .pricing__cards-item {
+    width: 257px;
+    height: 457px;
+    background-color: $price-card-item;
+  }
+  .cards-item--highlight {
+    width: 299px;
+    height: 560px;
+    background: $price-card-item-highlight;
+  }
+  .pricing__cards-title {
+    @include flexstyle(row, center, center, nowrap);
+    height: 97px;
+    background-color: $price-card-item-title;
+    @include textstyle(24px, 400, 24px, "Montserrat", $text-light, center);
+  }
+  .cards-title--highlight {
+    height: 111px;
+    background-color: $price-card-item-title-highlight;
+  }
+  .pricing__cards-price {
+    padding: 30px 0 20px;
+    @include textstyle(60px, 400, 62px, "Montserrat", $text-light, center);
+    & span {
+      font-weight: 700;
+    }
+  }
+  .cards-price--highlight {
+    @include textstyle(82px, 400, 84px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-valid-time {
+    @include textstyle(14px, 400, 16px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-blue-line {
+    margin: 38px auto 30px;
+    width: 60px;
+    height: 5px;
+    background-color: $accent;
+  }
+  .pricing__cards-terms {
+    padding: 0 12px 39px;
+    @include textstyle(16px, 400, 18px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-button {
+    margin: 0 auto;
+    @include flexstyle(row, center, center, nowrap);
+    width: 163px;
+    height: 45px;
+    border-radius: 22px;
+    background-color: $price-card-button;
+    @include textstyle(15px, 400, 15px, "Montserrat", $text-light, center);
+  }
+  .cards-button--highlight {
+    margin-top: 42px;
+    width: 190px;
+    height: 52px;
+    border-radius: 26px;
+  }
+}
+//-----------------------------------------------------------------------------
+@media (min-width: 481px) and (max-width: 992.5px) {
+  .pricing {
+    padding: 0 10px;
+    background-image: url("./../dist/img/price.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .pricing__title {
+    margin: 0 auto;
+    width: 85%;
+    padding-top: 12px;
+    @include textstyle(28px, 700, 42px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards {
+    padding: 32px 0 100px;
+    margin-right: calc((100% - 581px) / 2);
+    @include flexstyle(row, end, center, wrap);
+    column-gap: 25px;
+    row-gap: 30px;
+  }
+  .pricing__cards-item {
+    width: 257px;
+    height: 457px;
+    background-color: $price-card-item;
+  }
+  .cards-item--highlight {
+    width: 299px;
+    height: 560px;
+    background: $price-card-item-highlight;
+  }
+  .pricing__cards-title {
+     @include flexstyle(row, center, center, nowrap);
+    height: 97px;
+    background-color: $price-card-item-title;
+    @include textstyle(24px, 400, 24px, "Montserrat", $text-light, center);
+  }
+  .cards-title--highlight {
+    height: 111px;
+    background-color: $price-card-item-title-highlight;
+  }
+  .pricing__cards-price {
+    padding: 30px 0 20px;
+    @include textstyle(60px, 400, 62px, "Montserrat", $text-light, center);
+    & span {
+      font-weight: 700;
+    }
+  }
+  .cards-price--highlight {
+    @include textstyle(82px, 400, 84px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-valid-time {
+    @include textstyle(14px, 400, 16px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-blue-line {
+    margin: 38px auto 30px;
+    width: 60px;
+    height: 5px;
+    background-color: $accent;
+  }
+  .pricing__cards-terms {
+    padding: 0 12px 39px;
+    @include textstyle(16px, 400, 18px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-button {
+    margin: 0 auto;
+    @include flexstyle(row, center, center, nowrap);
+    width: 163px;
+    height: 45px;
+    border-radius: 22px;
+    background-color: $price-card-button;
+    @include textstyle(15px, 400, 15px, "Montserrat", $text-light, center);
+  }
+  .cards-button--highlight {
+    margin-top: 42px;
+    width: 190px;
+    height: 52px;
+    border-radius: 26px;
+  }
+  // _______________________________________________________________
+  // -----------------------------------------------------------------
+  @media (min-width: 481px) and (max-width: 623px) {
+    .pricing__cards {
+      margin-right: calc((100% - 440px) / 2);
+      column-gap: 10px;
+    }
+    .pricing__cards-item {
+      width: 200px;
+      height: 363px;
+    }
+    .cards-item--highlight {
+      width: 230px;
+      height: 442px;
+    }
+    .pricing__cards-title {
+      height: 76px;
+      @include textstyle(18px, 400, 18px, "Montserrat", $text-light, center);
+    }
+    .cards-title--highlight {
+      height: 87px;
+    }
+    .pricing__cards-price {
+      padding: 24px 0 15px;
+      @include textstyle(46px, 400, 46px, "Montserrat", $text-light, center);
+      & span {
+        font-weight: 700;
+      }
+    }
+    .cards-price--highlight {
+      @include textstyle(65px, 400, 65px, "Montserrat", $text-light, center);
+    }
+    .pricing__cards-blue-line {
+      margin: 30px auto 23px;
+    }
+    .pricing__cards-terms {
+      padding: 0 12px 30px;
+      @include textstyle(12px, 400, 12px, "Montserrat", $text-light, center);
+    }
+    .pricing__cards-button {
+      width: 163px;
+      height: 35px;
+      border-radius: 22px;
+      @include textstyle(15px, 400, 15px, "Montserrat", $text-light, center);
+    }
+    .cards-button--highlight {
+      margin-top: 33px;
+      width: 190px;
+      height: 52px;
+      border-radius: 26px;
+    }
+  }
+}
+// ==================================================================
+@media (min-width: 993px) {
+  .pricing {
+    padding: 0 10px;
+    background-image: url("./../dist/img/price.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .pricing__title {
+    margin: 0 auto;
+    width: 85%;
+    padding: 88px 0 61px;
+    @include textstyle(48px, 700, 50px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 0 100px;
+    @include flexstyle(row, center, center, nowrap);
+    column-gap: 15px;
+  }
+  .pricing__cards-item {
+    width: 257px;
+    height: 457px;
+    background-color: $price-card-item;
+  }
+  .cards-item--highlight {
+    width: 299px;
+    height: 560px;
+    background: $price-card-item-highlight;
+  }
+  .pricing__cards-title {
+    @include flexstyle(row, center, center, nowrap);
+    height: 97px;
+    background-color: $price-card-item-title;
+    @include textstyle(24px, 400, 24px, "Montserrat", $text-light, center);
+  }
+  .cards-title--highlight {
+    height: 111px;
+    background-color:$price-card-item-title-highlight;
+  }
+  .pricing__cards-price {
+    padding: 30px 0 20px;
+    @include textstyle(60px, 400, 62px, "Montserrat", $text-light, center);
+    & span {
+      font-weight: 700;
+    }
+  }
+  .cards-price--highlight {
+    @include textstyle(82px, 400, 84px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-valid-time {
+    @include textstyle(14px, 400, 16px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-blue-line {
+    margin: 38px auto 30px;
+    width: 60px;
+    height: 5px;
+    background-color: $accent;
+  }
+  .pricing__cards-terms {
+    padding: 0 12px 39px;
+    @include textstyle(16px, 400, 18px, "Montserrat", $text-light, center);
+  }
+  .pricing__cards-button {
+    margin: 0 auto;
+    @include flexstyle(row, center, center, nowrap);
+    width: 163px;
+    height: 45px;
+    border-radius: 22px;
+    background-color: $price-card-button;
+    @include textstyle(15px, 400, 15px, "Montserrat", $text-light, center);
+  }
+  .cards-button--highlight {
+    margin-top: 42px;
+    width: 190px;
+    height: 52px;
+    border-radius: 26px;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+
+.what-get__title {
+    @include title;
+    color: $accent;
+    margin: 30px 16px;
+
+    @media (min-width: $tablet) {
+        margin: 50px 32px;
+    }
+
+    @media (min-width: $desktop) {
+        grid-area: title;
+        margin: 0 16px;
+        text-align: left;
+    }
+}
+
+.what-get__features-wrap {
+    @include container;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media (min-width: $tablet) {
+        margin: 0 32px;
+    }
+
+    @media (min-width: $desktop) {
+        grid-area: features-wrap;
+        margin: 0;
+    }
+}
+
+.what-get__features-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    justify-content: center;
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        column-gap: 24px;
+    }
+}
+
+.what-get__features-icon {
+    min-width: 110px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.what-get__item-title {
+    color: $text-primary;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+
+    @media (min-width: $tablet) {
+        text-align: left;
+    }
+}
+
+.what-get__item-desc {
+    margin-top: 14px;
+    color: $text-secondary;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+
+    @media (min-width: $tablet) {
+        text-align: left;
+    }
+}
+
+.what-get__code-image {
+    overflow: hidden;
+    margin-top: 60px;
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    img {
+        width: 100%;
+        /* max-width: 100%;*/
+    }
+
+    @media (min-width: $desktop) {
+        grid-area: code-image;
+        width: 100%;
+        margin-top: 0;
+        align-self: end;
+    }
+}
+
+@media (min-width: $desktop) {
+    .what-get {
+        background-color: #F4F4F4;
+        padding: 100px 20px;
+    }
+    .what-get__content {
+
+        box-sizing: border-box;
+        padding: 0 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "features-wrap title"
+        "features-wrap code-image";
+        column-gap: 30px;
+    }
+}

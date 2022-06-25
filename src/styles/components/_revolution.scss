@@ -1,0 +1,89 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.revolution {
+    padding: 80px 0;
+}
+
+.revolution__content {
+    @include container;
+}
+
+.revolution__title {
+    color: $text-primary;
+    @include title;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.revolution__text {
+    color: $text-primary;
+    font-size: 14px;
+    margin-top: 30px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    max-width: 860px;
+
+    @media (min-width: $tablet) {
+        font-size: 21px;
+    }
+}
+
+.revolution__statistic-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 24px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $desktop) {
+        row-gap: 30px;
+    }
+}
+
+.revolution__statistic-item {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(27,31,36,0.15);
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    p {
+        font-weight: 700;
+        font-size: 11px;
+        @media (min-width: $tablet) {
+            font-size: 12px;
+        }
+        @media (min-width: $desktop) {
+            font-size: 14px;
+        }
+    }
+}
+
+.revolution__statistic-logo {
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    border-right: 1px solid rgba(27,31,36,0.15);
+
+    &:hover {
+        cursor: pointer;
+        background-color: #F4F4F4;
+    }
+
+    @media (min-width: $desktop) {
+        padding: 5px 12px;
+    }
+}
+
+.revolution__statistic-number {
+    padding: 3px 8px;
+    @media (min-width: $desktop) {
+        padding: 5px 12px;
+    }
+}

@@ -1,0 +1,147 @@
+@media (max-width: 480.5px) {
+  .people-talking {
+    width: 100%;
+    padding: 0 10px;
+    min-width: 320px;
+    background-image: url("./../dist/img/people_talking.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .people-talking__title {
+    padding: 57px 5% 53px;
+    @include textstyle(36px, 700, 48px, "Montserrat", $text-light, center);
+  }
+  .peolpe-talking__companies {
+    max-width: 1200px;
+    @include flexstyle(column, center, center, wrap);
+    gap: 41px;
+  }
+  .people-talking_companies-item {
+    min-width: 287px;
+    width: 80%;
+    height: 166px;
+    @include textstyle(16px, 700, 24px, "Lato", $text-light, center);
+    font-style: italic;
+    @include flexstyle(column, center, center, nowrap); 
+    gap: 27px;
+  }
+  .people-talking__bottom-title {
+    position: relative;
+    padding: 30px 0 22px;
+    margin: 0 auto;
+    min-width: 287px;
+    width: 70%;
+    @include textstyle(14px, 400, 21px, "Lato", $bottom-title-people-color, center);
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0px;
+      bottom: 0px;
+      width: 100%;
+      height: 0px;
+      border-bottom: 2px solid $bottom-title-line-color;
+    }
+  }
+}
+//===================================================================
+@media (min-width: 481px) and (max-width: 992.5px) {
+  .people-talking {
+    padding: 0 10px;
+    padding-bottom: 36px;
+    background-image: url("./../dist/img/people_talking.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .people-talking__title {
+    padding: 57px 5% 53px;
+    @include textstyle(42px, 700, 44px, "Montserrat", $text-light, center);
+  }
+  .peolpe-talking__companies {
+    @include flexstyle(row, center, center, wrap);
+    column-gap: 2%;
+    row-gap: 54px;
+  }
+  .people-talking__company-logo {
+    height: 65px;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    flex-shrink: none;
+  }
+  .people-talking_companies-item {
+    width: 45%;
+    height: 166px;
+    @include textstyle(16px, 700, 24px, "Lato", $text-light, center);
+    font-style: italic;
+    @include flexstyle(column, start, center, nowrap);
+    gap: 22px;  
+  }
+  .people-talking__bottom-title {
+    position: relative;
+    padding-top: 65px;
+    margin: 0 auto;
+    min-width: 287px;
+    width: 70%;
+    @include textstyle( 14px, 400, 21px, "Lato", $bottom-title-people-color, center );
+    &::after {
+      position: absolute;
+      content: "";
+      left: 15%;
+      bottom: -22px;
+      width: 70%;
+      height: 0px;
+      border-bottom: 2px solid $bottom-title-line-color;
+    }
+  }
+}
+//===================================================================
+@media (min-width: 993px) {
+  .people-talking {
+    padding: 0 10px;
+    background-image: url("./../dist/img/people_talking.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .people-talking__title {
+    padding: 108px 5% 80px;
+    @include textstyle(48px, 700, 50px, "Montserrat", $text-light, center);
+  }
+  .peolpe-talking__companies {
+    max-width: 1200px;
+    margin: 0 auto;
+    column-gap: 100px;
+    row-gap: 54px; 
+    @include flexstyle(row, center, center, wrap);
+  }
+  .people-talking__company-logo {
+    height: 65px;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    flex-shrink: none;
+  }
+  .people-talking_companies-item {
+    width: 25%;
+    height: 166px;
+    @include textstyle(16px, 700, 24px, "Lato", $text-light, center);
+    font-style: italic;
+    @include flexstyle(column, start, center, nowrap);
+    gap: 22px;   
+  }
+  .people-talking__bottom-title {
+    position: relative;
+    padding: 118px 0 40px;
+    margin: 0 auto;
+    @include textstyle( 14px, 400, 21px, "Lato", $bottom-title-people-color, center);
+    width: 80%;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 0px;
+      border-bottom: 2px solid $bottom-title-line-color;
+    }
+  }
+}
